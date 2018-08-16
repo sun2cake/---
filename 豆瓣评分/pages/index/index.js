@@ -1,54 +1,102 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    filmList: [{
+      title: "近期上映",
+      recentMovies: [{
+        src: "../../images/movie1.png",
+        movieName: "一出好戏",
+        score: "7.4"
+      }, {
+        src: "../../images/movie2.png",
+        movieName: "巨齿鲨",
+        score: "6.1"
+      }, {
+        src: "../../images/movie3.png",
+        movieName: "爱情公寓",
+        score: "2.7"
+      }, {
+        src: "../../images/movie2.png",
+        movieName: "巨齿鲨",
+        score: "6.1"
+      }, {
+        src: "../../images/movie2.png",
+        movieName: "巨齿鲨",
+        score: "6.1"
+      }, {
+        src: "../../images/movie2.png",
+        movieName: "巨齿鲨",
+        score: "6.1"
+      }, {
+        src: "../../images/movie2.png",
+        movieName: "巨齿11鲨",
+        score: "6.1"
+      }]
+    }, {
+        title: "热门电影",
+        recentMovies: [{
+          src: "../../images/movie8.png",
+          movieName: "死侍2",
+          score: "7.5"
+        }, {
+          src: "../../images/movie9.png",
+          movieName: "复仇者联盟3",
+          score: "8.2"
+        }, {
+          src: "../../images/movie10.png",
+          movieName: "第一归正会",
+          score: "6.8"
+        }, {
+          src: "../../images/movie2.png",
+          movieName: "巨齿鲨",
+          score: "6.1"
+        }, {
+          src: "../../images/movie2.png",
+          movieName: "巨齿鲨",
+          score: "6.1"
+        }, {
+          src: "../../images/movie2.png",
+          movieName: "巨齿鲨",
+          score: "6.1"
+        }, {
+          src: "../../images/movie2.png",
+          movieName: "巨齿11鲨",
+          score: "6.1"
+        }]
+      }, {
+        title: "电视剧",
+        recentMovies: [{
+          src: "../../images/movie8.png",
+          movieName: "死侍2",
+          score: "7.5"
+        }, {
+          src: "../../images/movie9.png",
+          movieName: "复仇者联盟3",
+          score: "8.2"
+        }, {
+          src: "../../images/movie10.png",
+          movieName: "第一归正会",
+          score: "6.8"
+        }, {
+          src: "../../images/movie2.png",
+          movieName: "巨齿鲨",
+          score: "6.1"
+        }, {
+          src: "../../images/movie2.png",
+          movieName: "巨齿鲨",
+          score: "6.1"
+        }, {
+          src: "../../images/movie2.png",
+          movieName: "巨齿鲨",
+          score: "6.1"
+        }, {
+          src: "../../images/movie2.png",
+          movieName: "巨齿11鲨",
+          score: "6.1"
+        }]
+      }],
+
+    
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
 })

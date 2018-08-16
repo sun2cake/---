@@ -1,4 +1,13 @@
 /* components/moveList/moveList.wxss */
+.moveList-container {
+  /* overflow: auto; */
+  width: 180rpx;
+}
+
+.moveList {
+
+}
+
 image {
   width: 180rpx;
   height: 250rpx;

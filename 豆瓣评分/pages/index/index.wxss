@@ -22,5 +22,13 @@ page, .container {
 }
 
 .moveList-box {
-  /* padding: 0 40rpx; */
+  margin: 0 40rpx;
+  height: 370rpx;
+  width: 1470rpx;
+  overflow: auto;
+}
+
+.comMovie {
+  float: left;
+  margin-right: 30rpx;
 }

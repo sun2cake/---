@@ -6,7 +6,7 @@ Component({
   properties: {
     src: {
       type: String,
-      value: '../../images/movie1.png'
+      value: 'url'
     },
 
     movieName: {
@@ -24,17 +24,25 @@ Component({
    * 组件的初始数据
    */
   data: {
-    starts: [{
-      status: 'full'
-    }, {
-      status: 'full'
-    }, {
-      status: 'full'
-    }, {
-      status: 'half'
-    }, {
-      status: 'none'
-    }]
+    stars: []
+  },
+
+  attached: function() {
+    var fullStar = parseInt(parseFloat(this.data.score) / 2);
+    var halfStar = Math.round(parseFloat(this.data.score) / 2)-fullStar;
+    var arr = [];
+    for (var i = 0; i < fullStar; i++) {
+      arr.push({"status":"full"});
+    }
+    for (var j = 0; j < halfStar; j++) {
+      arr.push({ "status": "half" });
+    }
+    for (var k = arr.length; k < 5; k++) {
+      arr.push({ "status": "none" });
+    }
+    this.setData({
+      stars: arr
+    })
   },
 
   /**

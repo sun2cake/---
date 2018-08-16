@@ -4,5 +4,7 @@
     <view class="title-name">{{title}}</view>
     <view class="title-more">更多></view>
   </view>
-  <slot></slot>
+  <scroll-view class="scroll-box" scroll-x>
+    <slot></slot>
+  </scroll-view>
 </view>

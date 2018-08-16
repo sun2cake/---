@@ -6,9 +6,9 @@
       搜索
     </button>
   </view>
-  <moveClassName title="近期上映">
+  <moveClassName wx:for="{{filmList}}" wx:for-item="item" wx:key="id" title="{{item.title}}">
     <scroll-view scroll-x class="moveList-box">
-      <moveList></moveList>
+      <moveList class="comMovie" wx:for="{{item.recentMovies}}" wx:for-item="list" wx:key="id" src="{{list.src}}" movieName="{{list.movieName}}" score="{{list.score}}"></moveList>
     </scroll-view>
   </moveClassName>
 </scroll-view>

@@ -1,6 +1,7 @@
 /* components/moveClassName/moveClassName.wxss */
 .moveClassName-box {
-  height: 200rpx;
+  /* height: 200rpx; */
+  overflow: auto;
 }
 
 .title {
@@ -21,4 +22,8 @@
   float: right;
   color: #42bd56;
   margin-right: 30rpx;
+}
+
+.scroll-box {
+  
 }
