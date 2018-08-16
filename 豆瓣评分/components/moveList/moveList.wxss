@@ -1,0 +1,30 @@
+/* components/moveList/moveList.wxss */
+image {
+  width: 180rpx;
+  height: 250rpx;
+}
+
+.movieName {
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.starts-container {
+  margin-top: 10rpx;
+  height: 60rpx;
+}
+
+.starts-container image {
+  width: 20rpx;
+  height: 20rpx;
+  float: left;
+  margin-right: 5rpx;
+}
+
+.score {
+  float: left;
+  font-size: 18rpx;
+  margin-left: 10rpx;
+  color: #aaa;
+}

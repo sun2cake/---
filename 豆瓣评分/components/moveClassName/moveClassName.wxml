@@ -1,0 +1,8 @@
+<!--components/moveClassName/moveClassName.wxml-->
+<view class="moveClassName-box">
+  <view class="title">
+    <view class="title-name">{{title}}</view>
+    <view class="title-more">更多></view>
+  </view>
+  <slot></slot>
+</view>

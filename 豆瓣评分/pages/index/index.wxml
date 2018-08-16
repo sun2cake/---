@@ -1,13 +1,14 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<scroll-view scroll-y class="container">
+  <view class="header-search">
+    <button size="mini" hover-class="active">
+      <icon type="search" size="12"></icon>
+      搜索
+    </button>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+  <moveClassName title="近期上映">
+    <scroll-view scroll-x class="moveList-box">
+      <moveList></moveList>
+    </scroll-view>
+  </moveClassName>
+</scroll-view>

@@ -1,1 +1,6 @@
-{}
+{
+  "usingComponents": {
+    "moveClassName": "/components/moveClassName/moveClassName",
+    "moveList": "/components/moveList/moveList"
+  }
+}

@@ -1,0 +1,13 @@
+<!--components/moveList/moveList.wxml-->
+<view class="moveList-box">
+  <image src="{{src}}"></image>
+  <view class="movieName">{{movieName}}</view>
+  <view class="starts-container">
+    <view wx:for="{{starts}}" wx:for-item="item">
+      <image wx:if="{{item.status == 'full'}}" src="../../images/3.png"></image>
+      <image wx:elif="{{item.status == 'half'}}" src="../../images/1.png"></image>
+      <image wx:else src="../../images/2.png"></image>
+    </view>
+    <text class="score">{{score}}</text>
+  </view>
+</view>
