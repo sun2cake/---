@@ -1,10 +1,12 @@
 <!--index.wxml-->
 <scroll-view scroll-y class="container">
   <view class="header-search">
+  <navigator url="../search/search">
     <button size="mini" hover-class="active">
       <icon type="search" size="12"></icon>
       搜索
     </button>
+  </navigator>
   </view>
   <moveClassName wx:for="{{filmList}}" wx:for-item="item" wx:key="id" title="{{item.title}}">
     <scroll-view scroll-x class="moveList-box">
