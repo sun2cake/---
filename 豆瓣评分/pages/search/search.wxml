@@ -1,0 +1,22 @@
+<!--pages/search/search.wxml-->
+<view class="search-box">
+  <view class="search-input">
+    <input placeholder='搜索' value="{{searchContent}}" bindinput="search" bindconfirm="complete"></input>
+    <text class="cancel" bindtap="cancel">取消</text>
+  </view>
+  <view class="search-tip">
+    <view class="tip-title" wx:if="{{history.length > 0}}">
+      <text class="tip-title-name">历史记录</text>
+      <text class="clear" bindtap="clear">清除</text>
+    </view>
+    <view class="tip-content">
+      <view class="tip-content-list" wx:for="{{history}}" wx:for-item="item" wx:key="id" data-value="{{item}}" bindtap="historyClick">{{item}}</view>
+    </view>
+    <view class="tip-title">
+      <text class="tip-title-name">热门搜索</text>
+    </view>
+    <view class="tip-content">
+      <view class="tip-content-list" wx:for="{{hot}}" wx:for-item="item" wx:key="id">{{item}}</view>
+    </view>
+  </view>
+</view>

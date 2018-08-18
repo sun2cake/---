@@ -1,0 +1,57 @@
+/* pages/login/login.wxss */
+.container {
+  text-align: center;
+}
+
+.title {
+  color: #42bd56;
+  font-size: 52rpx;
+  margin: 50rpx 0;
+}
+
+.container form .form-content {
+  margin: 0 60rpx;
+}
+
+.container .ipt {
+  padding: 20rpx;
+  font-size: 28rpx;
+  border: 1rpx solid #aaa;
+  text-align: left;
+}
+
+.ipt-name {
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.ipt-pwd {
+  position: relative;
+  top: -1rpx;
+  border-radius: 0 0 10rpx 10rpx;
+}
+
+.ipt-pwd2 {
+  position: relative;
+  top: -1rpx;
+}
+
+.ipt-phone {
+  position: relative;
+  top: -3rpx;
+  border-radius: 0 0 10rpx 10rpx;
+}
+
+.form-content button {
+  background: #42bd56;
+  color: #fff;
+  border: 0;
+  margin-top: 50rpx;
+  padding: 0;
+  font-size: 32rpx;
+  margin-bottom: 60rpx;
+}
+
+.register {
+  font-size: 32rpx;
+  color: #42bd56;
+}

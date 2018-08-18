@@ -1,16 +1,17 @@
-// pages/my/my.js
+// pages/login/login.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    status: 0
   },
 
-  login: function() {
-    wx.navigateTo({
-      url: "../login/login"
+  /**跳转至注册 */
+  goToregister: function() {
+    this.setData({
+      status: 1
     })
   },
 

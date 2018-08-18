@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="title">
+    <text>欢迎来到豆瓣</text>
+  </view>
+  <form>
+    <view class='form-content' wx:if="{{status == 0}}">
+      <input class="ipt ipt-name" placeholder="邮箱/手机号/用户名"></input>
+      <input class="ipt ipt-pwd" placeholder="密码"></input>
+      <button>登录</button>
+      <text class='register' bindtap="goToregister">注册豆瓣账号</text>
+    </view>
+    <view class='form-content' wx:else="{{status == 1}}">
+      <input class="ipt ipt-name" placeholder="昵称"></input>
+      <input class="ipt ipt-pwd2" placeholder="密码"></input>
+      <input class="ipt ipt-phone" placeholder="手机号"></input>
+      <button>注册</button>
+    </view>
+  </form>
+</view>
