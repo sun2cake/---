@@ -49,6 +49,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    lookDetail() {
+      wx.navigateTo({
+        url: '../detail/detail',
+      })
+    }
   }
 })

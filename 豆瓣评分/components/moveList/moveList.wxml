@@ -1,15 +1,15 @@
 <!--components/moveList/moveList.wxml-->
 <view class="moveList-container">
-<view class="moveList">
-  <image src="{{src}}"></image>
-  <view class="movieName">{{movieName}}</view>
-  <view class="starts-container">
-    <view wx:for="{{stars}}" wx:for-item="item" wx:key="id">
-      <image wx:if="{{item.status == 'full'}}" src="../../images/3.png"></image>
-      <image wx:elif="{{item.status == 'half'}}" src="../../images/1.png"></image>
-      <image wx:else src="../../images/2.png"></image>
+  <view class="moveList" bindtap="lookDetail">
+    <image src="{{src}}"></image>
+    <view class="movieName">{{movieName}}</view>
+    <view class="starts-container">
+      <view wx:for="{{stars}}" wx:for-item="item" wx:key="id">
+        <image wx:if="{{item.status == 'full'}}" src="../../images/3.png"></image>
+        <image wx:elif="{{item.status == 'half'}}" src="../../images/1.png"></image>
+        <image wx:else src="../../images/2.png"></image>
+      </view>
+      <text class="score">{{score}}</text>
     </view>
-    <text class="score">{{score}}</text>
   </view>
-</view>
 </view>

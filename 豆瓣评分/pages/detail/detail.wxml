@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-container">
+  <view class="header">
+    <image class="background" src="../../images/movie1.png" mode="aspectFill" ></image>
+    <view class="header-content">
+    </view>
+    <image class="film" src="../../images/movie1.png"></image>
+    <view class="text-box">
+      <text>一出好戏</text>
+      <view></view>
+    </view>
+  </view>
+</view>
