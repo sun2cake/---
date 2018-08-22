@@ -1,6 +1,7 @@
 /* pages/detail/detail.wxss */
 .header {
   position: relative;
+  height: 390rpx;
 }
 
 .header image.background {
@@ -24,4 +25,20 @@
   top: -240rpx;
   left: 50rpx;
   border: 4rpx solid #fff;
+}
+
+.text-box {
+  position:absolute;
+  top:95rpx;
+  left:285rpx;
+  color:#fff;
+}
+
+.detail-intr {
+  padding: 0 50rpx;
+  font-size: 30rpx;
+}
+
+.detail-intr text {
+  line-height: 42rpx;
 }

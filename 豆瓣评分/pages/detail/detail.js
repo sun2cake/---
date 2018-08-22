@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    detail: {
+      imgSrc: '../../images/movie1.png',
+      filmName: '一出好戏',
+      score: 7.3,
+      stars: [1],
+      nums: 223059,
+      time: '134分钟',
+      filmType: '剧情/喜剧',
+      clock: '2018-08-10（中国大陆）上映 中国大陆',
+      actors: '黄渤（导演）/黄渤/舒淇/王宝强'
+    }
   },
 
   /**

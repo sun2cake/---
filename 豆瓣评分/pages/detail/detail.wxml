@@ -1,13 +1,28 @@
 <!--pages/detail/detail.wxml-->
 <view class="detail-container">
   <view class="header">
-    <image class="background" src="../../images/movie1.png" mode="aspectFill" ></image>
-    <view class="header-content">
-    </view>
-    <image class="film" src="../../images/movie1.png"></image>
+    <image class="background" src="{{detail.imgSrc}}" mode="aspectFill" ></image>
+    <view class="header-content"></view>
+    <image class="film" src="{{detail.imgSrc}}"></image>
     <view class="text-box">
-      <text>一出好戏</text>
-      <view></view>
+      <text>{{detail.filmName}}</text>
+      <view>
+        <text>{{detail.score}}</text>
+        <view class="starts-container">
+          <view wx:for="{{stars}}" wx:for-item="item" wx:key="id">
+            <image wx:if="{{item.status == 'full'}}" src="../../images/3.png"></image>
+            <image wx:elif="{{item.status == 'half'}}" src="../../images/1.png"></image>
+            <image wx:else src="../../images/2.png"></image>
+          </view>
+          <text class="score">{{detail.nums}}人评价</text>
+        </view>
+      </view>
     </view>
+  </view>
+
+  <view class='detail-intr'>
+    <text>{{detail.time}}  {{detail.filmType}}\n</text>
+    <text>{{detail.clock}}\n</text>
+    <text>{{detail.actors}}\n</text>
   </view>
 </view>
